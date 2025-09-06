@@ -69,6 +69,7 @@ playwright/.cache/
 
 # Turborepo
 .turbo/
+*.tsbuildinfo
 
 # Vercel
 .vercel
