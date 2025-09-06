@@ -1,0 +1,20 @@
+{
+  "name": "@phoenix/database",
+  "version": "0.0.1",
+  "description": "Drizzle ORM schemas and database utilities for Phoenix platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "echo 'TypeScript build - Phase 0 Step 3'",
+    "dev": "echo 'Development watch - Phase 3'",
+    "migrate": "echo 'Database migrations - Phase 3'",
+    "seed": "echo 'Database seeding - Phase 3'",
+    "test": "echo 'Vitest tests - Phase 3'",
+    "lint": "echo 'BiomeJS linting - Phase 0 Step 3'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": ["database", "drizzle-orm", "postgresql", "migrations"],
+  "author": "DevNet Engineering <engineering@devnet.uk>",
+  "license": "MIT"
+}

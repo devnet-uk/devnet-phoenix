@@ -1,0 +1,17 @@
+{
+  "name": "@phoenix/web",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Phoenix web application - Next.js with Feature-Sliced Design",
+  "scripts": {
+    "dev": "echo 'Next.js development server - Phase 5 implementation'",
+    "build": "echo 'Next.js build - Phase 5 implementation'",
+    "start": "echo 'Next.js production server - Phase 5 implementation'",
+    "lint": "echo 'BiomeJS linting - Phase 0 Step 3'",
+    "type-check": "echo 'TypeScript checking - Phase 0 Step 3'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": ["nextjs", "feature-sliced-design", "phoenix-web"],
+  "author": "DevNet Engineering <engineering@devnet.uk>"
+}

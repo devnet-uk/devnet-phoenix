@@ -1,0 +1,19 @@
+{
+  "name": "@phoenix/api",
+  "version": "0.0.1",
+  "description": "HonoJS API server with Clean Architecture for Phoenix platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "echo 'HonoJS development server - Phase 4 implementation'",
+    "build": "echo 'TypeScript build - Phase 0 Step 3'",
+    "start": "echo 'Production server - Phase 6 deployment'",
+    "test": "echo 'Vitest tests - Phase 2/3/4'",
+    "lint": "echo 'BiomeJS linting - Phase 0 Step 3'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": ["api", "hono", "clean-architecture", "backend"],
+  "author": "DevNet Engineering <engineering@devnet.uk>",
+  "license": "MIT"
+}

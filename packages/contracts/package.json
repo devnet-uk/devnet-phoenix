@@ -1,0 +1,18 @@
+{
+  "name": "@phoenix/contracts",
+  "version": "0.0.1",
+  "description": "Type-safe API contracts and schemas for Phoenix platform",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "echo 'TypeScript build - Phase 0 Step 3'",
+    "dev": "echo 'Development watch - Phase 0 Step 3'",
+    "test": "echo 'Vitest tests - Phase 1'",
+    "lint": "echo 'BiomeJS linting - Phase 0 Step 3'"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": ["contracts", "zod", "api-schemas", "type-safety"],
+  "author": "DevNet Engineering <engineering@devnet.uk>",
+  "license": "MIT"
+}
