@@ -1,0 +1,2 @@
+# Packages directory for Phoenix monorepo
+# This directory will contain shared packages (contracts, api, auth, database, ui, etc.)
