@@ -1,0 +1,50 @@
+{
+  "name": "devnet-phoenix",
+  "version": "0.0.1",
+  "description": "Phoenix: Production-ready SaaS foundation built on Engineering OS framework",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "echo 'Development server setup pending - Phase 4'",
+    "build": "echo 'Build pipeline setup pending - Phase 0 Step 3'",
+    "test": "echo 'Test setup pending - Phase 1'",
+    "lint": "echo 'Lint setup pending - Phase 0 Step 3'",
+    "prepare": "husky",
+    "commit": "cz"
+  },
+  "keywords": [
+    "saas",
+    "engineering-os",
+    "clean-architecture",
+    "production-ready",
+    "typescript",
+    "nextjs"
+  ],
+  "author": "DevNet Engineering <engineering@devnet.uk>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devnet-uk/devnet-phoenix.git"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.15.1"
+  },
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

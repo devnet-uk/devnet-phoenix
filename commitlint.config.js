@@ -1,0 +1,46 @@
+export default {
+  extends: ['@commitlint/config-conventional'],
+  rules: {
+    'type-enum': [
+      2,
+      'always',
+      [
+        'feat',
+        'fix',
+        'docs',
+        'style',
+        'refactor',
+        'perf',
+        'test',
+        'chore',
+        'revert'
+      ]
+    ],
+    'scope-enum': [
+      2,
+      'always',
+      [
+        'auth',
+        'api',
+        'ui',
+        'database',
+        'config',
+        'deps',
+        'phase-0',
+        'phase-1',
+        'phase-2',
+        'phase-3',
+        'phase-4',
+        'phase-5',
+        'phase-6',
+        'phase-7'
+      ]
+    ],
+    'scope-case': [2, 'always', 'lower-case'],
+    'subject-case': [2, 'never', ['sentence-case', 'start-case', 'pascal-case', 'upper-case']],
+    'subject-empty': [2, 'never'],
+    'subject-full-stop': [2, 'never', '.'],
+    'type-case': [2, 'always', 'lower-case'],
+    'type-empty': [2, 'never']
+  }
+};
