@@ -13,7 +13,15 @@
     "coverage:check": "vitest run --coverage --reporter=verbose --coverage.thresholds.lines=98 --coverage.thresholds.functions=98 --coverage.thresholds.branches=98 --coverage.thresholds.statements=98",
     "lint": "echo 'Lint setup pending - Phase 0 Step 3'",
     "prepare": "husky",
-    "commit": "cz"
+    "commit": "cz",
+    "clean": "pnpm -r run clean",
+    "clean:deps": "pnpm -r exec rm -rf node_modules && rm -rf node_modules",
+    "clean:build": "pnpm -r run clean:build",
+    "type-check": "pnpm -r run type-check",
+    "workspace:list": "pnpm list -r --depth=-1",
+    "workspace:outdated": "pnpm outdated -r",
+    "workspace:update": "pnpm update -r",
+    "workspace:install": "pnpm install --frozen-lockfile"
   },
   "keywords": [
     "saas",

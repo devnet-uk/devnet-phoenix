@@ -10,8 +10,13 @@
     "lint": "echo 'BiomeJS linting - Phase 0 Step 3'",
     "type-check": "echo 'TypeScript checking - Phase 0 Step 3'"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "@phoenix/contracts": "workspace:*",
+    "@phoenix/shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@phoenix/api": "workspace:*"
+  },
   "keywords": ["nextjs", "feature-sliced-design", "phoenix-web"],
   "author": "DevNet Engineering <engineering@devnet.uk>"
 }
