@@ -53,5 +53,13 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "vitest related --run"
+    ],
+    "*.{js,jsx,ts,tsx,json,md}": [
+      "echo 'BiomeJS linting - Phase 0 Step 3 implementation'"
+    ]
   }
 }

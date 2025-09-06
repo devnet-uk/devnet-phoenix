@@ -1,8 +1,0 @@
-{
-  "*.{js,mjs,cjs,jsx,ts,mts,cts,tsx,json}": [
-    "echo 'BiomeJS check - Phase 0 Step 3 implementation'"
-  ],
-  "*.{js,mjs,cjs,jsx,ts,mts,cts,tsx}": [
-    "vitest related --run"
-  ]
-}
