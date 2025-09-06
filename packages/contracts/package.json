@@ -1,18 +1,54 @@
 {
   "name": "@phoenix/contracts",
   "version": "0.0.1",
-  "description": "Type-safe API contracts and schemas for Phoenix platform",
+  "description": "Type-safe API contracts and domain models for Phoenix",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "echo 'TypeScript build - Phase 0 Step 3'",
-    "dev": "echo 'Development watch - Phase 0 Step 3'",
-    "test": "echo 'Vitest tests - Phase 1'",
-    "lint": "echo 'BiomeJS linting - Phase 0 Step 3'"
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./api": {
+      "types": "./dist/api/index.d.ts",
+      "import": "./dist/api/index.js"
+    },
+    "./domain": {
+      "types": "./dist/domain/index.d.ts", 
+      "import": "./dist/domain/index.js"
+    },
+    "./schemas": {
+      "types": "./dist/schemas/index.d.ts",
+      "import": "./dist/schemas/index.js"
+    }
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "typescript": "workspace:*",
+    "vitest": "workspace:*"
+  },
   "keywords": ["contracts", "zod", "api-schemas", "type-safety"],
   "author": "DevNet Engineering <engineering@devnet.uk>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "restricted"
+  }
 }

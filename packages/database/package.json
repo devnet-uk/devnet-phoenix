@@ -2,19 +2,46 @@
   "name": "@phoenix/database",
   "version": "0.0.1",
   "description": "Drizzle ORM schemas and database utilities for Phoenix platform",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "echo 'TypeScript build - Phase 0 Step 3'",
-    "dev": "echo 'Development watch - Phase 3'",
-    "migrate": "echo 'Database migrations - Phase 3'",
-    "seed": "echo 'Database seeding - Phase 3'",
-    "test": "echo 'Vitest tests - Phase 3'",
-    "lint": "echo 'BiomeJS linting - Phase 0 Step 3'"
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "migrate": "drizzle-kit migrate",
+    "seed": "tsx scripts/seed.ts",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@phoenix/contracts": "workspace:*",
+    "drizzle-orm": "^0.44.4",
+    "postgres": "^3.4.7"
+  },
+  "devDependencies": {
+    "typescript": "workspace:*",
+    "vitest": "workspace:*",
+    "drizzle-kit": "^0.30.0",
+    "tsx": "^4.19.2"
+  },
   "keywords": ["database", "drizzle-orm", "postgresql", "migrations"],
   "author": "DevNet Engineering <engineering@devnet.uk>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "restricted"
+  }
 }

@@ -3,19 +3,31 @@
   "version": "0.0.1",
   "private": true,
   "description": "Phoenix web application - Next.js with Feature-Sliced Design",
+  "type": "module",
   "scripts": {
-    "dev": "echo 'Next.js development server - Phase 5 implementation'",
-    "build": "echo 'Next.js build - Phase 5 implementation'",
-    "start": "echo 'Next.js production server - Phase 5 implementation'",
-    "lint": "echo 'BiomeJS linting - Phase 0 Step 3'",
-    "type-check": "echo 'TypeScript checking - Phase 0 Step 3'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .next",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@phoenix/contracts": "workspace:*",
-    "@phoenix/shared": "workspace:*"
+    "@phoenix/ui": "workspace:*",
+    "@phoenix/auth": "workspace:*",
+    "next": "^15.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@phoenix/api": "workspace:*"
+    "typescript": "workspace:*",
+    "vitest": "workspace:*",
+    "@types/react": "^18.3.17",
+    "@types/react-dom": "^18.3.5",
+    "@types/node": "workspace:*"
   },
   "keywords": ["nextjs", "feature-sliced-design", "phoenix-web"],
   "author": "DevNet Engineering <engineering@devnet.uk>"

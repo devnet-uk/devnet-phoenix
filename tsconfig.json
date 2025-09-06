@@ -70,5 +70,12 @@
     "*.tsbuildinfo",
     ".turbo"
   ],
-  "references": []
+  "references": [
+    { "path": "./packages/contracts" },
+    { "path": "./packages/api" },
+    { "path": "./packages/auth" },
+    { "path": "./packages/database" },
+    { "path": "./packages/ui" },
+    { "path": "./apps/web" }
+  ]
 }

@@ -2,18 +2,43 @@
   "name": "@phoenix/api",
   "version": "0.0.1",
   "description": "HonoJS API server with Clean Architecture for Phoenix platform",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "dev": "echo 'HonoJS development server - Phase 4 implementation'",
-    "build": "echo 'TypeScript build - Phase 0 Step 3'",
-    "start": "echo 'Production server - Phase 6 deployment'",
-    "test": "echo 'Vitest tests - Phase 2/3/4'",
-    "lint": "echo 'BiomeJS linting - Phase 0 Step 3'"
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@phoenix/contracts": "workspace:*",
+    "hono": "^4.9.4"
+  },
+  "devDependencies": {
+    "typescript": "workspace:*",
+    "vitest": "workspace:*",
+    "tsx": "^4.19.2"
+  },
   "keywords": ["api", "hono", "clean-architecture", "backend"],
   "author": "DevNet Engineering <engineering@devnet.uk>",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "restricted"
+  }
 }
