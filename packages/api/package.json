@@ -31,8 +31,8 @@
     "hono": "^4.9.4"
   },
   "devDependencies": {
-    "typescript": "workspace:*",
-    "vitest": "workspace:*",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
     "tsx": "^4.19.2"
   },
   "keywords": ["api", "hono", "clean-architecture", "backend"],

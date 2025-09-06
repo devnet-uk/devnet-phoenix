@@ -23,11 +23,11 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "typescript": "workspace:*",
-    "vitest": "workspace:*",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4",
     "@types/react": "^18.3.17",
     "@types/react-dom": "^18.3.5",
-    "@types/node": "workspace:*"
+    "@types/node": "^24.3.1"
   },
   "keywords": ["nextjs", "feature-sliced-design", "phoenix-web"],
   "author": "DevNet Engineering <engineering@devnet.uk>"

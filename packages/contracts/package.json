@@ -42,8 +42,8 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "typescript": "workspace:*",
-    "vitest": "workspace:*"
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
   },
   "keywords": ["contracts", "zod", "api-schemas", "type-safety"],
   "author": "DevNet Engineering <engineering@devnet.uk>",
