@@ -32,7 +32,15 @@
     "type-check": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**/*.d.ts", "*.tsbuildinfo", ".tsbuildinfo"],
-      "inputs": ["src/**/*.ts", "src/**/*.tsx", "**/*.ts", "**/*.tsx", "tsconfig.json", "package.json", "global.d.ts"]
+      "inputs": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "tsconfig.json",
+        "package.json",
+        "global.d.ts"
+      ]
     },
     "clean": {
       "cache": false

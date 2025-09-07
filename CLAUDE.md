@@ -96,12 +96,12 @@ echo "Implementation commands available per phase"
 
 ### Current Status: Phase 0 (Infrastructure Setup)
 - ✅ **Step 1**: Repository Infrastructure (Complete)
-- 🟡 **Step 2**: Monorepo Architecture Specification (Next)
-- 🟡 **Step 3**: Core Packages Architecture Specification
-- 🟡 **Step 4**: Development Environment Specification  
-- 🟡 **Step 5**: Project Documentation Specification
+- ✅ **Step 2**: Monorepo Architecture Specification (Complete)
+- ✅ **Step 3**: Core Packages Architecture Specification (Complete)
+- ✅ **Step 4**: Development Environment Specification (Complete)
+- 🟡 **Step 5**: Project Documentation Specification (Current)
 
-### Future Phases (437 features total)
+### Future Phases (436 features total)
 - **Phase 1**: Core Domain Layer (100% coverage target)
 - **Phase 2**: Use Cases & Business Logic (95% coverage)
 - **Phase 3**: Infrastructure Layer (95% coverage)
@@ -112,17 +112,63 @@ echo "Implementation commands available per phase"
 
 ## Engineering OS Integration
 
-### Standards Consultation
-When implementing Phoenix features:
-1. **Check Engineering OS standards** in `~/Projects/devnet.clean_architecture/`
-2. **Follow clean architecture patterns** from `docs/standards/architecture/`
-3. **Use Engineering OS commands**: `/create-spec`, `/create-tasks`, `/execute-tasks`
-4. **Maintain verification compliance** with embedded testing
+Phoenix leverages the **embedded verification framework** for continuous standards compliance with hierarchical DSL navigation patterns.
 
-### Command Usage
+### Standards Consultation with Embedded Verification
+
+**Hierarchical DSL Loading Process**:
+1. **Root Dispatcher**: Loads `@docs/standards/standards.md` from Engineering OS repository
+2. **Category Routing**: Navigation to specific standard categories based on task keywords
+3. **Embedded Verification Extraction**: Standards files contain `<verification>` blocks with test commands
+4. **Variable Substitution**: Phoenix context variables applied (PROJECT_COVERAGE=98, PROJECT_TYPE=greenfield)
+5. **Automated Compliance**: Verification tests execute automatically during implementation
+6. **Blocking on Failures**: Critical embedded test failures prevent task completion
+
+### Enhanced Command Workflow Patterns
+
+**Engineering OS Commands** (executed by AI assistants):
 ```bash
-# Engineering OS commands (executed from appropriate workspace)
+# Specification workflow with embedded verification
+Claude: /create-spec "Feature Description"    # Consults standards with embedded verification blocks
+Claude: /create-tasks                        # Generates tasks with verification requirements
+Claude: /execute-tasks                       # Implements with continuous verification
+
+# Direct Phoenix continuation
 Continue Phoenix from phoenix-plan/phoenix.md
+```
+
+### Phoenix Variable Context
+
+**Automatically substituted in Engineering OS standards**:
+- `${PROJECT_NAME}` → phoenix
+- `${PROJECT_COVERAGE}` → 98 (greenfield standard)
+- `${PROJECT_TYPE}` → greenfield  
+- `${PROJECT_PHASES}` → phase-0:phase-7
+- `${NODE_VERSION}` → 22
+- `${PORT_WEB}` → 4000
+- `${PORT_API}` → 4001
+
+### Embedded Verification Framework
+
+**Example workflow during implementation**:
+```bash
+╔══════════════════════════════════════════════════════════╗
+║  Engineering OS Embedded Verification - Phoenix          ║
+╚══════════════════════════════════════════════════════════╝
+
+Loading standards via hierarchical dispatcher...
+✅ Root dispatcher → development → local-quality.md (embedded blocks loaded)
+✅ Variable substitution: PROJECT_COVERAGE=98, PROJECT_TYPE=greenfield
+✅ Extracted verification blocks for automated compliance checking
+
+┌─ Embedded verification execution ────────────────────────┐
+│ ✅ Coverage threshold: 98% (greenfield requirement)      │
+│ ✅ Git hooks: pre-commit, commit-msg, pre-push          │
+│ ✅ Phase scopes: phase-0 through phase-7                │
+│ ✅ BiomeJS: strict formatting with Engineering OS rules  │
+└───────────────────────────────────────────────────────────┘
+
+🎯 ALL EMBEDDED VERIFICATIONS PASSED - Implementation approved
 ```
 
 ### Path References

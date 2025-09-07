@@ -1,5 +1,5 @@
 /// <reference types="vitest" />
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
@@ -15,9 +15,17 @@ export default defineConfig({
       '**/.next/**',
       '**/out/**',
     ],
+    // Parallel execution with thread pool (maxThreads: 8)
+    pool: 'threads',
+    poolOptions: {
+      threads: {
+        maxThreads: 8,
+        minThreads: 1,
+      },
+    },
     coverage: {
       provider: 'v8',
-      reporter: ['text', 'json', 'html'],
+      reporter: ['text', 'json', 'html', 'lcov'],
       exclude: [
         'coverage/**',
         'dist/**',
@@ -37,29 +45,29 @@ export default defineConfig({
           branches: 98,
           functions: 98,
           lines: 98,
-          statements: 98
+          statements: 98,
         },
         // Domain layer requires 100% coverage (Clean Architecture core)
         '**/domain/**': {
           branches: 100,
           functions: 100,
           lines: 100,
-          statements: 100
+          statements: 100,
         },
         // UI and Infrastructure layers require 95% coverage
         '**/ui/**': {
           branches: 95,
           functions: 95,
           lines: 95,
-          statements: 95
+          statements: 95,
         },
         '**/infrastructure/**': {
           branches: 95,
           functions: 95,
           lines: 95,
-          statements: 95
-        }
-      }
-    }
-  }
-})
+          statements: 95,
+        },
+      },
+    },
+  },
+});

@@ -1,0 +1,55 @@
+{
+  "name": "@phoenix/core",
+  "version": "0.1.0",
+  "description": "Core domain layer for Phoenix application following Clean Architecture principles",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./domain/*": {
+      "import": "./dist/domain/*/index.js",
+      "types": "./dist/domain/*/index.d.ts"
+    },
+    "./use-cases/*": {
+      "import": "./dist/use-cases/*/index.js",
+      "types": "./dist/use-cases/*/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "test": "vitest",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest --coverage",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  },
+  "keywords": [
+    "clean-architecture",
+    "domain-driven-design",
+    "ddd",
+    "typescript",
+    "phoenix"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devnet-labs/phoenix.git",
+    "directory": "packages/core"
+  },
+  "license": "MIT"
+}

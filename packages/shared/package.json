@@ -12,7 +12,12 @@
   },
   "dependencies": {},
   "devDependencies": {},
-  "keywords": ["utilities", "shared", "common", "helpers"],
+  "keywords": [
+    "utilities",
+    "shared",
+    "common",
+    "helpers"
+  ],
   "author": "DevNet Engineering <engineering@devnet.uk>",
   "license": "MIT"
 }

@@ -1,0 +1,7 @@
+{
+  "*.{ts,tsx,js,jsx}": ["biome check --write", "vitest related --run --passWithNoTests"],
+  "*.{json,md,yml,yaml}": ["biome format --write"],
+  "*.{css,scss}": ["biome format --write"],
+  "package.json": ["sort-package-json"],
+  "turbo.json": ["biome format --write"]
+}

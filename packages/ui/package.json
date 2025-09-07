@@ -40,7 +40,12 @@
     "react": ">=18.0.0",
     "react-dom": ">=18.0.0"
   },
-  "keywords": ["react", "ui", "components", "design-system"],
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "design-system"
+  ],
   "author": "DevNet Engineering <engineering@devnet.uk>",
   "license": "MIT",
   "publishConfig": {

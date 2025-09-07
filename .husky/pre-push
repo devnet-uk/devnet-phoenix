@@ -1,0 +1,31 @@
+echo "🚀 Running pre-push quality checks..."
+
+# Run all tests
+echo "🧪 Running full test suite..."
+pnpm test:run || {
+  echo "❌ Test suite failed"
+  exit 1
+}
+
+# Verify build works
+echo "🏗️  Verifying build..."
+pnpm build || {
+  echo "❌ Build failed"
+  exit 1
+}
+
+# Type checking for all packages
+echo "🔧 Running comprehensive type check..."
+pnpm type-check || {
+  echo "❌ Type checking failed"
+  exit 1
+}
+
+# Security audit
+echo "🔒 Running security audit..."
+pnpm audit --audit-level moderate || {
+  echo "❌ Security vulnerabilities found"
+  exit 1
+}
+
+echo "✅ All pre-push checks passed!"

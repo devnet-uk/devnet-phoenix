@@ -1,0 +1,11 @@
+# Check if package-lock files changed
+if git diff --name-only HEAD@{1} HEAD | grep -q "pnpm-lock.yaml"; then
+  echo "🔄 Dependencies changed - running pnpm install..."
+  pnpm install --frozen-lockfile
+fi
+
+# Check if any package.json files changed
+if git diff --name-only HEAD@{1} HEAD | grep -q "package.json"; then
+  echo "🔄 Package configuration changed - verifying workspace integrity..."
+  pnpm workspace list
+fi

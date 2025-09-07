@@ -79,6 +79,7 @@ playwright/.cache/
 .pnp.*
 yarn.lock
 package-lock.json
+.pnpm-cache/
 
 # Local development
 .devcontainer/

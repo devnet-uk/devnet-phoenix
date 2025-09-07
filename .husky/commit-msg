@@ -1,1 +1,16 @@
-npx --no -- commitlint --edit $1
+# Validate commit message format with phase support
+npx --no-install commitlint --edit "$1" || {
+  echo "❌ Commit message format is invalid"
+  echo ""
+  echo "📝 Standard format: <type>(<scope>): <subject>"
+  echo "   Example: feat(auth): add OAuth2 integration"
+  echo ""
+  echo "🔥 Phoenix phase format: <type>(phase-N): <subject>"
+  echo "   Example: feat(phase-0): setup development environment"
+  echo "   Example: fix(phase-2): resolve API authentication bug"
+  echo "   Example: docs(phase-1): update database setup guide"
+  echo ""
+  echo "📋 Available phases: phase-0 through phase-7"
+  echo "📋 Available types: feat, fix, docs, style, refactor, perf, test, chore"
+  exit 1
+}

@@ -35,7 +35,12 @@
     "vitest": "^3.2.4",
     "tsx": "^4.19.2"
   },
-  "keywords": ["api", "hono", "clean-architecture", "backend"],
+  "keywords": [
+    "api",
+    "hono",
+    "clean-architecture",
+    "backend"
+  ],
   "author": "DevNet Engineering <engineering@devnet.uk>",
   "license": "MIT",
   "publishConfig": {

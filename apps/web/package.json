@@ -29,6 +29,10 @@
     "@types/react-dom": "^18.3.5",
     "@types/node": "^24.3.1"
   },
-  "keywords": ["nextjs", "feature-sliced-design", "phoenix-web"],
+  "keywords": [
+    "nextjs",
+    "feature-sliced-design",
+    "phoenix-web"
+  ],
   "author": "DevNet Engineering <engineering@devnet.uk>"
 }

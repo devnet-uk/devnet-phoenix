@@ -16,7 +16,7 @@
       "import": "./dist/api/index.js"
     },
     "./domain": {
-      "types": "./dist/domain/index.d.ts", 
+      "types": "./dist/domain/index.d.ts",
       "import": "./dist/domain/index.js"
     },
     "./schemas": {
@@ -45,7 +45,12 @@
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
-  "keywords": ["contracts", "zod", "api-schemas", "type-safety"],
+  "keywords": [
+    "contracts",
+    "zod",
+    "api-schemas",
+    "type-safety"
+  ],
   "author": "DevNet Engineering <engineering@devnet.uk>",
   "license": "MIT",
   "publishConfig": {

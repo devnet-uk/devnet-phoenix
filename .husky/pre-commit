@@ -1,1 +1,31 @@
-npx lint-staged
+echo "🔍 Running pre-commit quality checks..."
+
+# Run BiomeJS checks (Phoenix uses Engineering OS BiomeJS config)
+echo "📝 Checking code style with BiomeJS..."
+pnpm biome check --write . || {
+  echo "❌ BiomeJS checks failed"
+  exit 1
+}
+
+# Type checking
+echo "🔧 Running TypeScript type check..."
+pnpm type-check || {
+  echo "❌ Type checking failed"
+  exit 1
+}
+
+# Run tests for changed files
+echo "🧪 Running tests for changed files..."
+pnpm test:pre-commit || {
+  echo "❌ Tests failed for changed files"
+  exit 1
+}
+
+# Verify coverage threshold (98% for Phoenix greenfield)
+echo "📊 Checking coverage threshold (98%)..."
+pnpm coverage:check || {
+  echo "❌ Coverage threshold (98%) not met"
+  exit 1
+}
+
+echo "✅ All pre-commit checks passed!"

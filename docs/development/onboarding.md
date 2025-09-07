@@ -44,7 +44,8 @@ cd ~/Projects/devnet-phoenix/
 - [ ] **Add Phoenix repository** as primary workspace
 - [ ] **Add Engineering OS repository** as additional workspace
 - [ ] **Verify dual-repository access** in Claude Code
-- [ ] **Test Engineering OS command access**
+- [ ] **Test Engineering OS command access**: Try `Continue Phoenix from phoenix-plan/phoenix.md`
+- [ ] **Understand embedded verification**: Read [Engineering OS Integration](../../CLAUDE.md#engineering-os-integration)
 
 ## 📚 Knowledge & Documentation
 

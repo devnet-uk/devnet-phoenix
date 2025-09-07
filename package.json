@@ -7,10 +7,13 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
-    "test": "turbo test",
-    "test:run": "turbo test:run",
-    "test:coverage": "turbo test:coverage",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
     "coverage:check": "vitest run --coverage --reporter=verbose --coverage.thresholds.lines=98 --coverage.thresholds.functions=98 --coverage.thresholds.branches=98 --coverage.thresholds.statements=98",
+    "test:pre-commit": "vitest related --run --passWithNoTests",
+    "test:ui": "vitest --ui",
     "lint": "turbo lint",
     "prepare": "husky",
     "commit": "cz",
@@ -21,7 +24,9 @@
     "workspace:list": "pnpm list -r --depth=-1",
     "workspace:outdated": "pnpm outdated -r",
     "workspace:update": "pnpm update -r",
-    "workspace:install": "pnpm install --frozen-lockfile"
+    "workspace:install": "pnpm install --frozen-lockfile",
+    "validate-env": "node scripts/validate-env.js",
+    "setup": "pnpm install && pnpm validate-env && echo '✅ Phoenix development environment ready!'"
   },
   "keywords": [
     "saas",
@@ -47,14 +52,19 @@
   },
   "packageManager": "pnpm@10.15.1",
   "devDependencies": {
+    "@biomejs/biome": "^2.2.3",
     "@commitlint/cli": "^18.0.0",
     "@commitlint/config-conventional": "^18.0.0",
+    "@stryker-mutator/core": "^8.7.1",
+    "@stryker-mutator/typescript-checker": "^8.7.1",
+    "@stryker-mutator/vitest-runner": "^8.7.1",
     "@types/node": "^24.3.1",
     "@vitest/coverage-v8": "^3.2.4",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "husky": "^9.0.0",
     "lint-staged": "^16.1.6",
+    "sort-package-json": "^3.4.0",
     "turbo": "^2.5.6",
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"

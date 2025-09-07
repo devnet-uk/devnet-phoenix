@@ -33,7 +33,11 @@
     "typescript": "^5.9.2",
     "vitest": "^3.2.4"
   },
-  "keywords": ["authentication", "better-auth", "security"],
+  "keywords": [
+    "authentication",
+    "better-auth",
+    "security"
+  ],
   "author": "DevNet Engineering <engineering@devnet.uk>",
   "license": "MIT",
   "publishConfig": {

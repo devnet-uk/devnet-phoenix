@@ -38,7 +38,12 @@
     "drizzle-kit": "^0.30.0",
     "tsx": "^4.19.2"
   },
-  "keywords": ["database", "drizzle-orm", "postgresql", "migrations"],
+  "keywords": [
+    "database",
+    "drizzle-orm",
+    "postgresql",
+    "migrations"
+  ],
   "author": "DevNet Engineering <engineering@devnet.uk>",
   "license": "MIT",
   "publishConfig": {
