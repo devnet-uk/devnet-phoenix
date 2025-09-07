@@ -20,7 +20,6 @@
       "@/lib/*": ["./src/lib/*"],
       "@workspace/*": ["./packages/*/src"]
     },
-    // Strict type checking
     "noImplicitAny": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
